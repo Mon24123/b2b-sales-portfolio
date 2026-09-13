@@ -1,0 +1,16 @@
+@media (max-width: 900px) {
+  .outcomes { grid-template-columns: 1fr; gap: 14px; }
+  .outcomes > div { display: grid; grid-template-columns: 170px 1fr; align-items: baseline; }
+  .outcomes dt { font-size: 32px; }
+  .outcomes dd { margin-top: 0; }
+}
+
+@media (max-width: 640px) {
+  .outcomes > div { grid-template-columns: 135px 1fr; }
+  .outcomes dt { font-size: 34px; }
+}
+
+@media (max-width: 360px) {
+  .outcomes > div { grid-template-columns: 1fr; }
+  .outcomes dd { margin-top: 4px; }
+}

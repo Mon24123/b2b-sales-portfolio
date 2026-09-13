@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>销售作品集尺寸检查</title>
+<style>
+  body{margin:0;background:#dfe3e8;font:14px system-ui}nav{position:sticky;top:0;z-index:1;display:flex;gap:8px;padding:10px;background:white}button{min-height:40px;padding:6px 12px}iframe{display:block;margin:20px auto;border:0;background:white;height:760px}p{padding:0 14px}
+</style>
+<nav><button onclick="size(320)">320</button><button onclick="size(390)">390</button><button onclick="size(430)">430</button><button onclick="size(768)">768</button><button onclick="size(1024)">1024</button><button onclick="size(1440)">1440</button></nav>
+<p id="label">390 × 760</p><iframe src="../dist/" width="390"></iframe>
+<script>function size(w){const f=document.querySelector('iframe');f.width=w;f.style.transform='';f.style.transformOrigin='top left';if(w>innerWidth){f.style.transform=`scale(${(innerWidth-30)/w})`;f.style.marginLeft='15px'}document.querySelector('#label').textContent=`${w} × 760`}</script>
