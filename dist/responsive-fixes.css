@@ -23,6 +23,12 @@ nav { gap: 24px; }
 .section-head h2 { font-size: clamp(28px, 3.4vw, 40px); }
 .case-copy h4 { font-size: clamp(25px, 2.6vw, 34px); }
 .contact h2 { font-size: clamp(28px, 3.4vw, 40px); }
+.method { padding-block: 62px; }
+.method-grid { grid-template-columns: .68fr 1.32fr; gap: 64px; }
+.method-grid .section-head h2 { font-size: clamp(22px, 2.5vw, 29px); line-height: 1.4; }
+.method-list h3 { font-size: 17px; }
+.method-list p { font-size: 14px; }
+.method-list li { padding-block: 19px; }
 .compact-job .job-main p { color: var(--muted); }
 .experience-group { margin: 0; padding: 0 0 14px; color: var(--accent); font-size: 14px; letter-spacing: .08em; }
 .experience-group.secondary-group { margin-top: 54px; }
@@ -42,11 +48,17 @@ nav { gap: 24px; }
 .case-visual.glim figure { min-width: 0; }
 .case-visual.glim figcaption { margin-top: 7px; font-size: 12px; color: var(--muted); text-align: center; }
 
+@media (max-width: 900px) {
+  .method-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
 @media (max-width: 640px) {
   :root { --section: 58px; }
   .hero { padding-block: 42px; gap: 32px; }
   .hero h1 { font-size: clamp(30px, 8.8vw, 36px); }
   .section-head h2 { font-size: 29px; }
+  .method { padding-block: 46px; }
+  .method-grid .section-head h2 { font-size: 23px; }
   .inline-proof { grid-template-columns: 1fr; }
   .proof-thumb { grid-template-columns: 92px 1fr; }
   .proof-thumb img { width: 92px; height: 66px; }
